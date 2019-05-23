@@ -15,6 +15,8 @@ export default {
 <style scoped>
 .head-nav {
   width: 100%;
+
+  
   height: 50px;
   min-width: 600px;
   padding: 5px;
