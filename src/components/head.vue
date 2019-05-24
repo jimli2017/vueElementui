@@ -19,8 +19,8 @@
                     <i class="el-icon-arrow-down el-icon--right"></i>
                   </span>
                   <el-dropdown-menu slot="dropdown">
-                    <el-dropdown-item command="a">黄金糕</el-dropdown-item>
-                    <el-dropdown-item command="b">狮子头</el-dropdown-item>
+                    <el-dropdown-item command="a">个人信息</el-dropdown-item>
+                    <el-dropdown-item command="b">推出账号</el-dropdown-item>
                   </el-dropdown-menu>
                 </el-dropdown>
               </span>
@@ -36,29 +36,40 @@ export default {
   name: "headnav",
   data () {
     return {
-      information: {
-        location: {
-          station: this.paramsTem.data.location.station,
-          floor: this.paramsTem.data.location.floor,
-          x: this.paramsTem.data.location.x,
-          y: this.paramsTem.data.location.y,
-          z: this.paramsTem.data.location.z
-        },
-        "STEPDATAS":this.walknumber, 
-        "BTDATAS" :this.BTDATASarr
-      },
-      time:20190523
-    };
+
+    }  
   },
   methods: {
     handleCommand(command) {
-      this.$message("click on item " + command);
+      // this.$message("click on item " + command);
+      switch (command) {
+        case 'a':this.change();
+          
+          break;
+        case 'b':this.goout();
+          
+          break;
+        default:
+          break;
+      }
+    },
+    change(){
+      // this.$message({
+      //         message:'切换账号',
+      //         type:'success'
+      //       })
+      this.$router.push("/myself");
+    },
+    goout(){
+      this.$message({
+        message:'退出账号',
+        type:'success'
+      })
     }
   },
   created: function() {
     //   let aaa=this.time+JSON.stringify(this.information);
-      console.log(this.data.time);
-      console.log(this.data.information);
+      
   }
 };
 </script>
