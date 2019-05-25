@@ -17,6 +17,6 @@ export default {
     background-color: brown;
     opacity: 0.5;
     color: black;
-    height: 640px;
+    height: 300px;
 }
 </style>

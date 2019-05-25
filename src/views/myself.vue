@@ -1,6 +1,5 @@
 <template>
   <div class="myself">
-    这是个人信息页面
     <el-row>
         <el-col :span='8' class="bg-purple-dark">{{this.$store.state.name}}</el-col>
         <el-col :span='16' class="bg-purple">这是内容区域</el-col>

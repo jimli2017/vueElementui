@@ -3,7 +3,7 @@
     <el-row class="tac">
       <el-col :span="24">
         <el-menu class="el-menu-vertical-demo" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
-          <el-menu-item index="1">
+          <el-menu-item index="1" @click='goHome'>
             <i class="el-icon-setting"></i>
             <span slot="title">首页</span>
           </el-menu-item>
@@ -54,7 +54,10 @@ export default {
     },
     handleClose(key, keyPath) {
       console.log(key, keyPath);
-    }
+    },
+		goHome(){
+			this.$router.push("/home");
+		}
   },
   created: function() {
     //   let aaa=this.time+JSON.stringify(this.information);

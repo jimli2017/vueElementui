@@ -15,11 +15,12 @@ const router = new Router({
       path: '/',
       name: 'index',
       component: index,
-      children: [{
-          path: '',
-          name: 'home',
-          component: home
-        },
+      children: [
+				{
+				  path: '/',
+				  name: 'home',
+				  component: home
+				},
         {
           path: '/home',
           name: 'home',
@@ -36,13 +37,7 @@ const router = new Router({
       path: '/login',
       name: 'login',
       component: login
-    },
-    {
-      path: '/login',
-      name: 'login',
-      component: login
     }
-
   ]
 });
 
